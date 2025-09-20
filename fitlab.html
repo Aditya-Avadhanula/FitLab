@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fitlabm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rye&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script>
+      /*function openLoginPage() {
+          window.location.href = 'login.html'; // Change 'login.html' to the actual path of your login page
+      }*/
+      function openCalCPage() {
+        window.location.href = 'http://localhost:8501';
+      }
+      function openChatPage() {
+        window.location.href = 'Chatbot.html';
+      }
+      function openFoodPage() {
+        window.location.href = 'food custom plan.html';
+      }
+      function darkmode()
+      {
+        document.body.classList.toggle("dark-mode");
+        
+      }
+      function openbmi()
+      {
+        window.location.href = 'bmi.html';
+      }
+  </script>
+</head>
+<body>
+    <div class="section-1">
+        <div class="menu" id="m">
+           <!-- <p>sigin</p> -->
+           <button onclick="darkmode()" class="dark">Dark</button>
+            <div class="menu1" id="m1">
+                <button onclick="window.location.href='fitlab.html'">Home</button>
+                <button onclick="window.location.href='bmi.html'"> Bmi calculator</button>
+                <button onclick="window.loction.href='food custom plan.html'">Nutrition</button>
+                <button onclick="window.location.href='Chatbot.html'">Chatbot</button>
+                <button>Contact</button>
+            </div>
+          
+            <h1> FITLAB </h1>
+            <h4> - Your Personalised Fitness Partner</h4>
+            <!-- <button id="mb" type="button" onclick="openLoginPage()">Get Started</button> -->
+            <button id="mb" type="button" onclick="scrollToSection()">Chat With Our Bot</button>
+        </div>
+
+    </div>
+    
+    <div class="section-2">
+        <h2 id="h2"> About Us</h2>
+        <div class="sub-1">
+           <h4> Calorie Burn Calculator</h4>
+           <p>"Track every move with precision using ML technology."</p>
+        </div>
+        <div class="sub-2">
+            <h4> Good Health Insights</h4>
+            <p>"Access reliable data about 
+                nutrition, wellness trends."</p>
+            
+        </div>
+        <div class="sub-3">
+            <h4>chatbot</h4>
+            <p>"Your virtual trainer, ready 24/7 to guide you."</p>
+            
+        </div>
+       
+    <!-- <div class="section-3">
+        <h2 id="h2"> Need Support Chat With FITBOT??</h2>
+        <pre>"Your fitness buddy is always here to help! 
+            Ask FitBot about workouts, diets, or general
+             fitness tips and get instant answers.” </pre>
+             <img src="v22_874.png">
+        <button type="submit">
+            Ask FitBot
+        </button>     
+
+        
+    </div>
+    <div class="section-4">
+        <h3> Track Your Burn. 
+            Achieve Your Goals.</h3>
+            <pre>
+                calculator gives you real-time insights into your 
+                calorie burn,helping you plan your fitness journey
+                 better
+            </pre>
+            <img src="v22_877.png">
+            <button type="submit">Discover Your Energy Burn</button>
+        
+    </div>
+    <div class="section-5">
+        <h3>Fuel Your Body.
+            Feel Amazing</h3>
+            <pre>Stay energized and reach your 
+                goals faster with a custom nutrition 
+                plan. Discover delicious, easy-to-
+                make recipes tailored just for you</pre>
+                <img src="v43_48.png">
+                <button type="submit">Get Your Custom Plan</button>
+                
+    </div>
+    <div class="section-6">
+        <p>contact-us</p>
+        
+    </div> -->
+    <h2 id="h3"> Services </h2>
+    <div class="section-3">
+        
+        <div>
+            <h2>Need Support Chat With FITBOT??</h2>
+            <pre id="para">"Your fitness buddy is always here to help! 
+                            Ask FitBot about workouts, diets, or general
+                            fitness tips and get instant answers.” </pre>
+            <button type="button" onclick="openChatPage()">Ask FitBot</button>
+        </div>
+        <img src="Chatbot_img.jpg" alt="FitBot Image"> <!-- Image aligned to the right -->
+    </div>
+    
+    <div class="section-4">
+        <div>
+            <h2>Track Your Burn. Achieve Your Goals.</h2>
+            <pre id="para">Calculator gives you real-time 
+                           insights into your calorie burn, helping 
+                           you plan your fitness journey better.</pre>
+            <button type="button" onclick="openCalCPage()">Discover Your Energy Burn</button>
+            
+        </div>
+        <img  id="sp" src="Calorie_img.jpg" alt="Calorie Burn Image"> <!-- Image aligned to the right -->
+    </div>
+    
+    <div class="section-5">
+        <div>
+            <h2>Fuel Your Body. Feel Amazing</h2>
+            <pre id="para">Stay energized and reach your goals
+                           faster with a custom nutrition  plan. 
+                           Discover delicious, easy-to-make recipes
+                           tailored just for you.</pre>
+            <button type="button" onclick="openFoodPage()">Get Your Custom Plan</button>
+        </div>
+        <img src="Food_img.jpg" alt="Nutrition Image"> <!-- Image aligned to the right -->
+    </div>
+    <div class="section-6">
+        <div>
+            <h2>Calculate your body mass index</h2>
+            <pre id="para">A useful screening tool for assessing weight and health. </pre>
+            <button type="button" onclick="openbmi()">get your Bmi</button>
+        </div>
+        <img src="bmi_img.jpg" alt="bmi Image">
+    </div>
+    
+    <!-- <div class="footer">
+        <p>Contact Us: 123 Fitness St, Health City, Fitland</p>
+        <p>Email: support@fitlab.com | Phone: (123) 456-7890</p>
+    </div> -->
+    <!-- <footer id="footer">
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+    
+              <div class="col-lg-3 col-md-6">
+                <div class="footer-info">
+                  <h3>Gp<span>.</span></h3>
+                  <p>
+                    A108 Adam Street <br>
+                    NY 535022, USA<br><br>
+                    <strong>Phone:</strong> +1 5589 55488 55<br>
+                    <strong>Email:</strong> info@example.com<br>
+                  </p>
+                  <div class="social-links mt-3">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-2 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 footer-newsletter">
+                <h4>Our Newsletter</h4>
+                <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                <form action="" method="post">
+                  <input type="email" name="email"><input type="submit" value="Subscribe">
+                </form>
+    
+              </div>
+    
+            </div>
+          </div>
+        </div>
+    
+        <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+            <footer id="footer">
+              <div class="footer-top">
+                  <div class="container">
+                      <div class="row">
+          
+                          <div class="col-lg-3 col-md-6">
+                              <div class="footer-info">
+                                  <h3>Contact Us<span>.</span></h3>
+                                  <p>
+                                      Chintalavalasa <br>
+                                      vzm,535005,India<br><br>
+                                      <strong>Phone:</strong> +91 93817 27703<br>
+                                      <strong>Email:</strong> <a href="laxmiharika@gmail.com">laxmiharika@gmail.com</a><br>
+                                  </p>
+                                  <div class="social-links mt-3">
+                                      <a href="#" class="twitter" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+                                      <a href="#" class="facebook" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+                                      <a href="#" class="instagram" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+                                      <a href="#" class="google-plus" aria-label="Google Plus"><i class="bx bxl-skype"></i></a>
+                                      <a href="#" class="linkedin" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+          
+                          <div class="col-lg-2 col-md-6 footer-links">
+                              
+          
+                          <div class="col-lg-4 col-md-6 footer-newsletter">
+                              <form action="" method="post">
+                                  <input type="email" name="email" placeholder="Your Email" required>
+                                  <input type="submit" value="Subscribe">
+                              </form>
+                          </div>
+          
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="container">
+                  <div class="copyright">
+                      &copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
+                  </div>
+                  <div class="credits">
+                      Designed by <a href="https://bootstrapmade.com/">fitlabcommunity</a>
+                  </div>
+              </div>
+          </footer><!-- End Footer -->
+          <script src="script.js"></script>
+           
+    
+</body>
+</html> 
