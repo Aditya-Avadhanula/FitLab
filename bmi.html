@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #8B0000, #B22222, #DC143C, #1E3A8A, #4169E1, #4682B4);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            padding: 50px;
+            color: white;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container {
+            background-image: url(imAgess.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+            color: black;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #000000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .result-container {
+            background: #FFE5B4; /* Light peach background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .bmi-info {
+            flex: 1;
+        }
+        .bmi-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .bmi-category {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .stars {
+            font-size: 40px;
+            margin-left: 20px;
+        }
+        .star {
+            color: #FFE5B4 ; /* Default star color */
+        }
+        .star.red {
+            color: red;
+        }
+        .star.green {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>BMI Calculator</h2>
+        <input type="number" id="weight" placeholder="Enter weight (kg)">
+        <input type="number" id="height" placeholder="Enter height (cm)">
+        <button onclick="calculateBMI()">Calculate</button>
+
+        <!-- Result Container -->
+        <div class="result-container" id="resultContainer">
+            <div class="bmi-info">
+                <div class="bmi-value" id="bmiValue"></div>
+                <div class="bmi-category" id="bmiCategory"></div>
+            </div>
+            <div class="stars">
+                <span class="star" id="star1">★</span>
+                <span class="star" id="star2">★</span>
+                <span class="star" id="star3">★</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateBMI() {
+            let weight = parseFloat(document.getElementById('weight').value);
+            let height = parseFloat(document.getElementById('height').value) / 100; // Convert cm to meters
+            if (weight > 0 && height > 0) {
+                let bmi = (weight / (height * height)).toFixed(2);
+                let bmiValue = document.getElementById('bmiValue');
+                let bmiCategory = document.getElementById('bmiCategory');
+                let star1 = document.getElementById('star1');
+                let star2 = document.getElementById('star2');
+                let star3 = document.getElementById('star3');
+
+                // Update BMI value
+                bmiValue.innerText = `BMI: ${bmi}`;
+
+
+                // Reset all stars to default color
+                star1.className = 'star';
+                star2.className = 'star';
+                star3.className = 'star';
+
+                if (bmi < 18.5) {
+                    bmiCategory.innerText = 'Underweight';
+                    bmiCategory.style.color = 'blue';
+                    star1.classList.add('red'); // 1 red star
+                } else if (bmi >= 18.5 && bmi < 24.9) {
+                    bmiCategory.innerText = 'Normal Weight';
+                    bmiCategory.style.color = 'green';
+                    star1.classList.add('green'); // 2 green stars
+                    star2.classList.add('green');
+                } else if (bmi >= 25 && bmi < 29.9) {
+                    bmiCategory.innerText = 'Overweight';
+                    bmiCategory.style.color = 'orange';
+                    star1.classList.add('red'); // 3 red stars
+                    star2.classList.add('red');
+                    star3.classList.add('red');
+                } else {
+                    bmiCategory.innerText = 'Obese';
+                    bmiCategory.style.color = 'red';
+                    star1.classList.add('red'); // 3 red stars
+                    star2.classList.add('red');
+                    star3.classList.add('red');
+                }
+            } else {
+                alert('Please enter valid weight and height!');
+            }
+        }
+    </script>
+</body>
+</html>
